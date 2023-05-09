@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".UyeBilgiGuncelleme">
+
+    <EditText
+        android:id="@+id/txtUyeBilgiGuncellemeİsim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="İsim"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeBilgiGuncellemeTelefon"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeBilgiGuncellemeSoyisim"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeBilgiGuncellemeSoyisim"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUyeBilgiGuncellemeSoyisim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="106dp"
+        android:ems="10"
+        android:hint="Soyisim"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeBilgiGuncellemeTelefon"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeBilgiGuncellemeTelefon"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeBilgiGuncellemeTelefon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUyeBilgiGuncellemeTelefon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="398dp"
+        android:ems="10"
+        android:hint="Telefon Numarası"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeBilgiGuncellemeEPosta"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeBilgiGuncellemeEPosta"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeBilgiGuncellemeSoyisim" />
+
+    <EditText
+        android:id="@+id/txtUyeBilgiGuncellemeEPosta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:hint="E-Mail Adresi"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/SpnUyeBilgiGuncellemeMarka"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeBilgiGuncellemeMarka"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeBilgiGuncellemeMarka"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeBilgiGuncellemeTelefon" />
+
+    <CheckBox
+        android:id="@+id/ChcUyeBilgiGuncellemeBir"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="31dp"
+        android:text="1. Sınıf"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnUyeBilgileriGuncelle"
+        app:layout_constraintEnd_toStartOf="@+id/ChcUyeBilgiGuncellemeİki"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeBilgiGuncellemePlaka" />
+
+    <CheckBox
+        android:id="@+id/ChcUyeBilgiGuncellemeİki"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="146dp"
+        android:text="2. Sınıf"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ChcUyeBilgiGuncellemeBir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ChcUyeBilgiGuncellemeBir"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeBilgiGuncellemePlaka" />
+
+    <Button
+        android:id="@+id/btnUyeBilgileriGuncelle"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="BilgileriGuncelle"
+        android:text="Bilgileri Güncelle"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChcUyeBilgiGuncellemeBir" />
+
+    <EditText
+        android:id="@+id/txtUyeBilgiGuncellemeMarka"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Marka"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/SpnUyeBilgiGuncellemeMarka"
+        app:layout_constraintEnd_toEndOf="@+id/SpnUyeBilgiGuncellemeMarka"
+        app:layout_constraintStart_toStartOf="@+id/SpnUyeBilgiGuncellemeMarka"
+        app:layout_constraintTop_toTopOf="@+id/SpnUyeBilgiGuncellemeMarka" />
+
+    <EditText
+        android:id="@+id/txtUyeBilgiGuncellemeModel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Model"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/SpnUyeBilgiGuncellemeModel"
+        app:layout_constraintEnd_toEndOf="@+id/SpnUyeBilgiGuncellemeModel"
+        app:layout_constraintStart_toStartOf="@+id/SpnUyeBilgiGuncellemeModel"
+        app:layout_constraintTop_toTopOf="@+id/SpnUyeBilgiGuncellemeModel" />
+
+    <EditText
+        android:id="@+id/txtUyeBilgiGuncellemePlaka"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Plaka"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/ChcUyeBilgiGuncellemeBir"
+        app:layout_constraintEnd_toEndOf="@+id/ChcUyeBilgiGuncellemeBir"
+        app:layout_constraintStart_toEndOf="@+id/ChcUyeBilgiGuncellemeBir"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeBilgiGuncellemeSifre" />
+
+    <EditText
+        android:id="@+id/txtUyeBilgiGuncellemeSifre"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeBilgiGuncellemePlaka"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeBilgiGuncellemePlaka"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeBilgiGuncellemePlaka"
+        app:layout_constraintTop_toBottomOf="@+id/SpnUyeBilgiGuncellemeModel" />
+
+    <Spinner
+        android:id="@+id/SpnUyeBilgiGuncellemeMarka"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/SpnUyeBilgiGuncellemeModel"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeBilgiGuncellemeModel"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeBilgiGuncellemeModel"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeBilgiGuncellemeEPosta" />
+
+    <Spinner
+        android:id="@+id/SpnUyeBilgiGuncellemeModel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeBilgiGuncellemeSifre"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeBilgiGuncellemeSifre"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeBilgiGuncellemeSifre"
+        app:layout_constraintTop_toBottomOf="@+id/SpnUyeBilgiGuncellemeMarka" />
+</androidx.constraintlayout.widget.ConstraintLayout>

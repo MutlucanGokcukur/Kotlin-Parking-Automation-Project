@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".PersonelEkle">
+
+    <EditText
+        android:id="@+id/txtPersonelEkleSifreTekrar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="Şifre Tekrar"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnPersonelEkle"
+        app:layout_constraintEnd_toEndOf="@+id/btnPersonelEkle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelEkleSifre" />
+
+    <EditText
+        android:id="@+id/txtPersonelEkleSifre"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelEkleSifreTekrar"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelEkleSifreTekrar"
+        app:layout_constraintStart_toStartOf="@+id/txtPersonelEkleSifreTekrar"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelEkleEPosta" />
+
+    <EditText
+        android:id="@+id/txtPersonelEkleEPosta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="E-Mail Adresi"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelEkleSifre"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelEkleSifre"
+        app:layout_constraintStart_toStartOf="@+id/txtPersonelEkleSifre"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelEkleSoyisim" />
+
+    <EditText
+        android:id="@+id/txtPersonelEkleTelefon"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:hint="Telefon Numarası"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelEkleSifre"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelEkleEPosta"
+        app:layout_constraintStart_toStartOf="@+id/txtPersonelEkleEPosta"
+        app:layout_constraintTop_toTopOf="@+id/txtPersonelEkleSoyisim" />
+
+    <Spinner
+        android:id="@+id/SpnPersonelEkleOtopark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelEkleİsim"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelEkleİsim"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"
+        android:text="Personelin ekleneceği otopark:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelEkleİsim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="100dp" />
+
+    <EditText
+        android:id="@+id/txtPersonelEkleİsim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="353dp"
+        android:ems="10"
+        android:hint="İsim"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelEkleSoyisim"
+        app:layout_constraintStart_toStartOf="@+id/txtPersonelEkleSoyisim"
+        app:layout_constraintTop_toBottomOf="@+id/SpnPersonelEkleOtopark" />
+
+    <EditText
+        android:id="@+id/txtPersonelEkleSoyisim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="49dp"
+        android:ems="10"
+        android:hint="Soyisim"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelEkleEPosta"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelEkleTelefon"
+        app:layout_constraintStart_toStartOf="@+id/txtPersonelEkleTelefon"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelEkleİsim" />
+
+    <Button
+        android:id="@+id/btnPersonelEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:onClick="PersonelEkle"
+        android:text="Personel Ekle"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelEkleSifreTekrar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

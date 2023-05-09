@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".UyeAnaSayfa">
+
+    <TextView
+        android:id="@+id/txtUyeAnaSayfaGirisTarih"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Giriş Tarih:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeAnaSayfaGirisSaat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnUyeSayfaQRKod"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="6dp"
+        android:onClick="QROkuma"
+        android:text="Giriş Yap"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeAnaSayfaPrgBarKocaeliOtopark"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <TextView
+        android:id="@+id/txtUyeAnaSayfaOtopark"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Otopark:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/UyeAnaSayfaPrgBarKocaeliOtopark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/UyeAnaSayfaPrgBarKocaeliOtopark"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="473dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnUyeSayfaQRKod"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnUyeAnaSayfaCikis"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="btnUyeSayfaAracCikis"
+        android:text="Çıkış Yap"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeAnaSayfaPrgBarKocaeliOtopark"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <TextView
+        android:id="@+id/txtUyeAnaSayfaPlaka"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Plaka:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeAnaSayfaGirisTarih"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtUyeAnaSayfaGirisSaat"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Giriş Saat:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtUyeAnaSayfaPersonelTelefon"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Personel Telefon:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeAnaSayfaAracKonum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtUyeAnaSayfaAracKonum"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Araç Konum:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeAnaSayfaOtopark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Otopark personeller:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SpnUyeAnaSayfaPersonel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/SpnUyeAnaSayfaPersonel"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeAnaSayfaPersonelTelefon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

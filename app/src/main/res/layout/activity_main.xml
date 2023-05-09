@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnMainUyeGiris"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/login"
+        android:onClick="UyeGiris"
+        android:shadowColor="@color/white"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="24sp"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMainUyeOl"
+        app:layout_constraintEnd_toStartOf="@+id/btnMainUyeOl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMainUyeOl" />
+
+    <Button
+        android:id="@+id/btnMainUyeOl"
+        android:layout_width="0dp"
+        android:layout_height="103dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/ekle"
+        android:onClick="UyeOl"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMainUyeGiris" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".MusteriUcretler">
+
+    <EditText
+        android:id="@+id/txtMusteriUcretAylık"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="Aylık Ücret"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txtMusteriUcretGunluk"
+        app:layout_constraintTop_toBottomOf="@+id/txtMusteriUcretGunluk" />
+
+    <EditText
+        android:id="@+id/txtMusteriUcretGunluk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Günlük Ücret"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/txtMusteriUcretSaatlik"
+        app:layout_constraintTop_toBottomOf="@+id/txtMusteriUcretSaatlik" />
+
+    <EditText
+        android:id="@+id/txtMusteriUcretSaatlik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:ems="10"
+        android:hint="Saatlik Ücret"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chcMusteriUcretBirSınıf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="22dp"
+        android:onClick="BirUcret"
+        android:text="1. Sınıf"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/chcMusteriUcretİkiSınıf"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMusteriUcretAylık" />
+
+    <CheckBox
+        android:id="@+id/chcMusteriUcretİkiSınıf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="İkiUcret"
+        android:text="2. Sınıf"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chcMusteriUcretBirSınıf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chcMusteriUcretBirSınıf" />
+</androidx.constraintlayout.widget.ConstraintLayout>

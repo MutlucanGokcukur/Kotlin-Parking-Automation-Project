@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".UcretGuncelleme">
+
+    <CheckBox
+        android:id="@+id/chcUcretGuncellemeBirSınıf"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="429dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="BirGoster"
+        android:text="1. Sınıf Araç"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnUcretGuncelle"
+        app:layout_constraintEnd_toStartOf="@+id/chcUcretGuncellemeİkiSınıf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chcUcretGuncellemeİkiSınıf"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="429dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="İkiGoster"
+        android:text="2. Sınıf Araç"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnUcretGuncelle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chcUcretGuncellemeBirSınıf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUcretGuncellemeSaatlik"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="229dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="Saatlik Ücret"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUcretGuncellemeGunluk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUcretGuncellemeGunluk"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:hint="Günlük Ücret"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUcretGuncellemeAylık"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUcretGuncellemeSaatlik" />
+
+    <EditText
+        android:id="@+id/txtUcretGuncellemeAylık"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:hint="Aylık Ücret"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/chcUcretGuncellemeBirSınıf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUcretGuncellemeGunluk" />
+
+    <Button
+        android:id="@+id/btnUcretGuncelle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:onClick="UcretGuncelle"
+        android:text="Ücretleri Güncelle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chcUcretGuncellemeBirSınıf" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".PersonelBilgiGuncelle">
+
+    <Button
+        android:id="@+id/btnPersonelBilgiPersonelSil"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="53dp"
+        android:onClick="PersonelSil"
+        android:text="Personel Sil"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnPersonelBilgiGuncelle"
+        app:layout_constraintStart_toStartOf="@+id/btnPersonelBilgiGuncelle"
+        app:layout_constraintTop_toBottomOf="@+id/btnPersonelBilgiGuncelle" />
+
+    <EditText
+        android:id="@+id/txtPersonelBilgiGuncelleİsim"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="İsim"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelBilgiGuncelleSoyisim"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelBilgiGuncelleSoyisim"
+        app:layout_constraintStart_toStartOf="@+id/SpnPersonelBilgiGuncellePersonel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPersonelBilgiGuncelleSoyisim"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="353dp"
+        android:ems="10"
+        android:hint="Soyisim"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelBilgiGuncelleTelefon"
+        app:layout_constraintStart_toStartOf="@+id/txtPersonelBilgiGuncelleTelefon"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelBilgiGuncelleİsim" />
+
+    <EditText
+        android:id="@+id/txtPersonelBilgiGuncelleTelefon"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="49dp"
+        android:ems="10"
+        android:hint="Telefon Numara"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelBilgiGuncelleSifre"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelBilgiGuncelleEPosta"
+        app:layout_constraintStart_toStartOf="@+id/txtPersonelBilgiGuncelleEPosta"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelBilgiGuncelleSoyisim" />
+
+    <EditText
+        android:id="@+id/txtPersonelBilgiGuncelleEPosta"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:hint="E-Posta Adresi"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnPersonelBilgiGuncelle"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersonelBilgiGuncelleSifre"
+        app:layout_constraintStart_toStartOf="@+id/txtPersonelBilgiGuncelleSifre"
+        app:layout_constraintTop_toTopOf="@+id/txtPersonelBilgiGuncelleSoyisim" />
+
+    <EditText
+        android:id="@+id/txtPersonelBilgiGuncelleSifre"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnPersonelBilgiGuncelle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelBilgiGuncelleTelefon" />
+
+    <Button
+        android:id="@+id/btnPersonelBilgiGuncelle"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:onClick="PersonelBilgiGuncelle"
+        android:text="Güncelle"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPersonelBilgiPersonelSil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPersonelBilgiGuncelleSifre" />
+
+    <Spinner
+        android:id="@+id/SpnPersonelBilgiGuncellePersonel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPersonelBilgiGuncelleSoyisim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

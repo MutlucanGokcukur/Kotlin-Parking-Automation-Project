@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".UyeOlma">
+
+    <EditText
+        android:id="@+id/txtUyeOlmaİsim"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="49dp"
+        android:ems="10"
+        android:hint="İsim"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeOlmaTelefon"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeOlmaSoyisim"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeOlmaSoyisim"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUyeOlmaSoyisim"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:hint="Soyisim"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeOlmaEMailAdres"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeOlmaTelefon"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeOlmaTelefon"
+        app:layout_constraintTop_toTopOf="@+id/txtUyeOlmaİsim" />
+
+    <Spinner
+        android:id="@+id/SpnUyeOlmaArabaMarkaları"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="49dp"
+        android:tooltipText="colo"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeOlmaSifre"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeOlmaSifre"
+        app:layout_constraintStart_toStartOf="@+id/SpnUyeOlmaModeller"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeOlmaEMailAdres" />
+
+    <Spinner
+        android:id="@+id/SpnUyeOlmaModeller"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeOlmaSifreTekrar"
+        app:layout_constraintEnd_toEndOf="@+id/chcUyeOlmaİki"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeOlmaSifre"
+        app:layout_constraintTop_toTopOf="@+id/SpnUyeOlmaArabaMarkaları" />
+
+    <EditText
+        android:id="@+id/txtUyeOlmaTelefon"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="Telefon Numarası"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeOlmaEMailAdres"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeOlmaEMailAdres"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeOlmaEMailAdres"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeOlmaİsim" />
+
+    <EditText
+        android:id="@+id/txtUyeOlmaEMailAdres"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="E-Mail Adresi"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/SpnUyeOlmaArabaMarkaları"
+        app:layout_constraintEnd_toEndOf="@+id/SpnUyeOlmaArabaMarkaları"
+        app:layout_constraintStart_toStartOf="@+id/SpnUyeOlmaArabaMarkaları"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeOlmaTelefon" />
+
+    <Button
+        android:id="@+id/btnHesapOluştur"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:onClick="HesapOlustur"
+        android:text="Hesap Oluştur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chcUyeOlmaBir" />
+
+    <EditText
+        android:id="@+id/txtUyeOlmaSifre"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeOlmaSifreTekrar"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeOlmaSifreTekrar"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeOlmaSifreTekrar"
+        app:layout_constraintTop_toBottomOf="@+id/SpnUyeOlmaArabaMarkaları" />
+
+    <EditText
+        android:id="@+id/txtUyeOlmaSifreTekrar"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Şifre Tekrar"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtUyeOlmaPlaka"
+        app:layout_constraintEnd_toEndOf="@+id/txtUyeOlmaPlaka"
+        app:layout_constraintStart_toStartOf="@+id/txtUyeOlmaPlaka"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeOlmaSifre" />
+
+    <EditText
+        android:id="@+id/txtUyeOlmaPlaka"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Plaka"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/chcUyeOlmaBir"
+        app:layout_constraintStart_toStartOf="@+id/chcUyeOlmaBir"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeOlmaSifreTekrar" />
+
+    <CheckBox
+        android:id="@+id/chcUyeOlmaBir"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="25dp"
+        android:text="1. Sınıf"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnHesapOluştur"
+        app:layout_constraintEnd_toStartOf="@+id/chcUyeOlmaİki"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeOlmaPlaka" />
+
+    <CheckBox
+        android:id="@+id/chcUyeOlmaİki"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="146dp"
+        android:text="2. Sınıf"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chcUyeOlmaBir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chcUyeOlmaBir"
+        app:layout_constraintTop_toBottomOf="@+id/txtUyeOlmaPlaka" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
