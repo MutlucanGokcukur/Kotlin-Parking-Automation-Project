@@ -19,6 +19,7 @@ class CalisanSayfa : AppCompatActivity() {
         setContentView(R.layout.activity_calisan_sayfa)
         Plakalar= mutableListOf<String>()
         ID=intent.getIntExtra("ID",0)
+        title="Personel Sayfası"
         ParkHalindekiAraclar()
         val adapter= ArrayAdapter(this,R.layout.spinnerselectitem,Plakalar)
         LstCalisanSayfa.adapter=adapter
@@ -96,6 +97,12 @@ class CalisanSayfa : AppCompatActivity() {
             val intent=Intent(applicationContext,UyeGiris::class.java)
             startActivity(intent)
             finish()
+        }
+        else if(item.itemId==R.id.sikayetler)
+        {
+            val intent=Intent(applicationContext,SikayetListesi::class.java)
+            intent.putExtra("ID",ID)
+            startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
     }

@@ -29,6 +29,7 @@ class UyeAnaSayfa : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uye_ana_sayfa)
+        title="Müşteri Ana Sayfa"
         ID=intent.getIntExtra("ID",0)
         Personeller= mutableListOf<String>()
         PersonellerTelefon= mutableListOf<String>()

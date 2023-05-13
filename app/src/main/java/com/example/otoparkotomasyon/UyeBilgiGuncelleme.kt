@@ -26,6 +26,7 @@ class UyeBilgiGuncelleme : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uye_bilgi_guncelleme)
+        title="Bilgi Güncelleme"
         secilimarka=""
         Markalar= mutableListOf<String>()
         Modeller= mutableListOf<String>()

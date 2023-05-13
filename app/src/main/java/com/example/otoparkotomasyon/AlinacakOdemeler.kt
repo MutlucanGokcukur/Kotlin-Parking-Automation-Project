@@ -19,6 +19,7 @@ class AlinacakOdemeler : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alinacak_odemeler)
+        title="Alınacak Ödemeler"
         Plakalar= mutableListOf<String>()
        Odenecekler()
         val adapter= ArrayAdapter(this,R.layout.spinnerselectitem,Plakalar)

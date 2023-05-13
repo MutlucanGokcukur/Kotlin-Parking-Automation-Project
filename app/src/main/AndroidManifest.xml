@@ -14,6 +14,12 @@
         android:theme="@style/Theme.OtoparkOtomasyon"
         tools:targetApi="31">
         <activity
+            android:name=".SikayetDetaylar"
+            android:exported="false" />
+        <activity
+            android:name=".SikayetListesi"
+            android:exported="false" />
+        <activity
             android:name=".MusteriUcretler"
             android:exported="false" />
         <activity

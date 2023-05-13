@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Tablolar= mutableListOf<String>()
-        title="Giriş"
+        title="Otopark Otomasyonu"
         val Database=openOrCreateDatabase("OtomasyonVeriTabanı", MODE_PRIVATE,null)
         val cursor=Database.rawQuery("SELECT DISTINCT tbl_name FROM sqlite_master",null)
         while (cursor.moveToNext())
@@ -68,11 +68,16 @@ class MainActivity : AppCompatActivity() {
         }
         if(!Tablolar.contains("sikayetler"))
         {
-            Database.execSQL("CREATE TABLE IF NOT EXISTS sikayetler(Sikayet_ID INTEGER PRIMARY KEY AUTOINCREMENT,Musteri_ID INT,Sikayet_Edilen_Personel_ID INT,Sikayet_Nedeni_ID INT,Sikayet VARCHAR,FOREIGN KEY(Musteri_ID) REFERENCES musteriler(Musteri_ID),FOREIGN KEY(Sikayet_Edilen_Personel_ID) REFERENCES personeller(Personel_ID),FOREIGN KEY(Sikayet_Nedeni_ID) REFERENCES sikayet_nedenleri(Sikayet_Nedeni_ID))")
+            Database.execSQL("CREATE TABLE IF NOT EXISTS sikayetler(Sikayet_ID INTEGER PRIMARY KEY AUTOINCREMENT,Otopark_ID INT,Musteri_ID INT,Sikayet_Edilen_Personel_ID INT,Sikayet_Nedeni_ID INT,Sikayet VARCHAR,FOREIGN KEY(Musteri_ID) REFERENCES musteriler(Musteri_ID),FOREIGN KEY(Sikayet_Edilen_Personel_ID) REFERENCES personeller(Personel_ID),FOREIGN KEY(Sikayet_Nedeni_ID) REFERENCES sikayet_nedenleri(Sikayet_Nedeni_ID))")
         }
         if(!Tablolar.contains("sikayet_nedenleri"))
         {
             Database.execSQL("CREATE TABLE sikayet_nedenleri(Sikayet_Nedeni_ID INTEGER PRIMARY KEY,Sikayet_Nedeni VARCHAR)")
+            Database.execSQL("INSERT INTO sikayet_nedenleri VALUES(1,'Araç Hasar')")
+            Database.execSQL("INSERT INTO sikayet_nedenleri VALUES(2,'Personel')")
+            Database.execSQL("INSERT INTO sikayet_nedenleri VALUES(3,'Fiyatlar')")
+            Database.execSQL("INSERT INTO sikayet_nedenleri VALUES(4,'Otopark')")
+            Database.execSQL("INSERT INTO sikayet_nedenleri VALUES(5,'Diğer')")
         }
         if(!Tablolar.contains("araclar"))
         {

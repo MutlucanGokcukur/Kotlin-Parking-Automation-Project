@@ -23,6 +23,7 @@ class UyeSikayetSayfasi : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uye_sikayet_sayfasi)
+        title="Şikayet Sayfası"
         ID=intent.getIntExtra("ID",0)
         Otoparklar= mutableListOf<String>()
         Nedenler= mutableListOf<String>()
@@ -106,11 +107,13 @@ class UyeSikayetSayfasi : AppCompatActivity() {
     fun SikayetOlustur(view:View)
     {
         val Database=openOrCreateDatabase("OtomasyonVeriTabanı", MODE_PRIVATE,null)
-        val personelidcursor=Database.rawQuery("SELECT Personel_ID from personeller INNER JOIN otoparklar On otoparklar.Otopark_ID=personeller.Otopark_ID WHERE Otopark_Adı=?", arrayOf(seciliotopark))
+        val personelidcursor=Database.rawQuery("SELECT personeller.Otopark_ID ,Personel_ID from personeller INNER JOIN otoparklar On otoparklar.Otopark_ID=personeller.Otopark_ID WHERE Otopark_Adı=?", arrayOf(seciliotopark))
         var personelid=0
+        var otoparkid=0
         while (personelidcursor.moveToNext())
         {
             personelid=personelidcursor.getInt(personelidcursor.getColumnIndex("Personel_ID").toInt())
+            otoparkid=personelidcursor.getInt(personelidcursor.getColumnIndex("Otopark_ID").toInt())
         }
 
         val sikayetnedenid=Database.rawQuery("SELECT Sikayet_Nedeni_ID from sikayet_nedenleri WHERE Sikayet_Nedeni=?", arrayOf(secilineden))
@@ -126,8 +129,8 @@ class UyeSikayetSayfasi : AppCompatActivity() {
         alert.setMessage("Şikayetiniz oluşturulup ilgili personellere iletilecek.\nŞikayetinizden emin misiniz?")
         alert.setPositiveButton("Evet"){dialog,which->
             try {
-                Database.execSQL("INSERT INTO sikayetler(Musteri_ID,Sikayet_Edilen_Personel_ID,Sikayet_Nedeni_ID,Sikayet) VALUES(?,?,?,?)",
-                    arrayOf(ID,personelid,sikayetid,txtSikayetSayfaSikayet.text.toString()))
+                Database.execSQL("INSERT INTO sikayetler(Otopark_ID,Musteri_ID,Sikayet_Edilen_Personel_ID,Sikayet_Nedeni_ID,Sikayet) VALUES(?,?,?,?,?)",
+                    arrayOf(otoparkid,ID,personelid,sikayetid,txtSikayetSayfaSikayet.text.toString()))
                 Toast.makeText(applicationContext,"Şikayetiniz başarıyla alındı", Toast.LENGTH_LONG).show()
             }
             catch (e:java.lang.Exception)

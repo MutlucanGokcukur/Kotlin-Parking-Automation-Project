@@ -21,6 +21,7 @@ class PersonelSayfa : AppCompatActivity() {
         Plakalar= mutableListOf<String>()
         ID=intent.getIntExtra("ID",0)
         ParkHalindekiAraclar()
+        title="Yönetici Sayfası"
         val adapter=ArrayAdapter(this,R.layout.spinnerselectitem,Plakalar)
         LstPersonelSayfa.adapter=adapter
         LstPersonelSayfa.onItemClickListener=AdapterView.OnItemClickListener{ parent, view, position, id->
@@ -106,6 +107,12 @@ class PersonelSayfa : AppCompatActivity() {
             val intent=Intent(applicationContext,UyeGiris::class.java)
             startActivity(intent)
             finish()
+        }
+        else if(item.itemId==R.id.sikayetler)
+        {
+            val intent=Intent(applicationContext,SikayetListesi::class.java)
+            intent.putExtra("ID",ID)
+            startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
     }

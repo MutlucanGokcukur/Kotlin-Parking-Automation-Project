@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denemeiki"
+    tools:context=".SikayetDetaylar">
+
+    <TextView
+        android:id="@+id/txtSikayetDetaylarSikayetOtopark"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="Şikayet Edilen Otopark:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtSikayetDetaylarPersonel"
+        app:layout_constraintEnd_toEndOf="@+id/txtSikayetDetaylarPersonel"
+        app:layout_constraintStart_toStartOf="@+id/txtSikayetDetaylarPersonel"
+        app:layout_constraintTop_toBottomOf="@+id/txtSikayetDetaylarSikayetNedeni" />
+
+    <TextView
+        android:id="@+id/txtSikayetDetaylarSikayet"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="104dp"
+        android:text="Şikayet:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSikayetDetaylarPersonel" />
+
+    <TextView
+        android:id="@+id/txtSikayetDetaylarMusteri"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="37dp"
+        android:text="Müşteri:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtSikayetDetaylarSikayetNedeni"
+        app:layout_constraintEnd_toEndOf="@+id/txtSikayetDetaylarSikayetNedeni"
+        app:layout_constraintStart_toStartOf="@+id/txtSikayetDetaylarSikayetNedeni"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSikayetDetaylarPersonel"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="51dp"
+        android:text="Şikayet Edilen Personel:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtSikayetDetaylarSikayet"
+        app:layout_constraintEnd_toEndOf="@+id/txtSikayetDetaylarSikayet"
+        app:layout_constraintStart_toStartOf="@+id/txtSikayetDetaylarSikayet"
+        app:layout_constraintTop_toBottomOf="@+id/txtSikayetDetaylarSikayetOtopark" />
+
+    <TextView
+        android:id="@+id/txtSikayetDetaylarSikayetNedeni"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Şikayet Nedeni:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtSikayetDetaylarSikayetOtopark"
+        app:layout_constraintEnd_toEndOf="@+id/txtSikayetDetaylarSikayetOtopark"
+        app:layout_constraintStart_toStartOf="@+id/txtSikayetDetaylarSikayetOtopark"
+        app:layout_constraintTop_toBottomOf="@+id/txtSikayetDetaylarMusteri" />
+</androidx.constraintlayout.widget.ConstraintLayout>

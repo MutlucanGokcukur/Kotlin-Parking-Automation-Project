@@ -14,6 +14,7 @@ class UyeGiris : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uye_giris)
         val database=openOrCreateDatabase("OtomasyonVeriTabanı", MODE_PRIVATE,null)
+        title="Giriş"
     }
 
     fun Giris(view:View)

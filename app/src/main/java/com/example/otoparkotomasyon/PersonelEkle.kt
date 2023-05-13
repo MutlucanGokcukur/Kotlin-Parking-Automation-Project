@@ -22,6 +22,7 @@ class PersonelEkle : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personel_ekle)
+        title="Personel Ekleme"
         Otoparklar= mutableListOf<String>()
         OtoparklarID= mutableListOf<Int>()
         Otoparklar()

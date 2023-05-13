@@ -16,6 +16,7 @@ class PersonelMusteriBilgiler : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personel_musteri_bilgiler)
         Musteriler= mutableListOf<String>()
+        title="Müşteri Bilgiler"
         Musteriler()
         val adapter= ArrayAdapter(this,R.layout.spinnerselectitem,Musteriler)
         LstPersonelMusteriBilgiler.adapter=adapter

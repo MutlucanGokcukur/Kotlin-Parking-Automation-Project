@@ -14,6 +14,7 @@ class MusteriUcretler : AppCompatActivity() {
         txtMusteriUcretSaatlik.isEnabled=false
         txtMusteriUcretGunluk.isEnabled=false
         txtMusteriUcretAylık.isEnabled=false
+        title="Ücretlendirmeler"
     }
 
     fun BirUcret(view: View)

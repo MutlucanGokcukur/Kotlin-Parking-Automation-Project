@@ -13,6 +13,7 @@ class CalisanBilgiGuncelle : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calisan_bilgi_guncelle)
+        title="Çalışan Bilgi Güncelle"
         ID=intent.getIntExtra("ID",0)
         CalisanVeriler()
     }

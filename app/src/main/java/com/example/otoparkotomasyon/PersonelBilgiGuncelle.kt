@@ -22,6 +22,7 @@ class PersonelBilgiGuncelle : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personel_bilgi_guncelle)
+        title="Personel Bilgi Güncelle"
         ID=intent.getIntExtra("ID",0)
         Personeller= mutableListOf<String>()
         try {

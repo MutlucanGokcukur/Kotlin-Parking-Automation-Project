@@ -17,6 +17,7 @@ class UcretGuncelleme : AppCompatActivity() {
         txtUcretGuncellemeAylık.isEnabled=false
         txtUcretGuncellemeGunluk.isEnabled=false
         txtUcretGuncellemeSaatlik.isEnabled=false
+        title="Ücret Güncelleme"
     }
     fun BirGoster(view:View)
     {

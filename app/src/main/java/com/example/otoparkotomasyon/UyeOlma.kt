@@ -23,6 +23,7 @@ class UyeOlma : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uye_olma)
+        title="Üye Olma"
         MarkaDurum=this.getSharedPreferences("com.example.otoparkotomasyon",Context.MODE_PRIVATE)
         ModelDurum=this.getSharedPreferences("com.example.otoparkotomasyon",Context.MODE_PRIVATE)
         markalar= mutableListOf<String>()
